@@ -38,19 +38,19 @@ def postorder(root):
 def get_inorder(root):
     if root is None:
         return []
-    return inorder(root.left_child) + [root.data] + inorder(root.right_child)
+    return get_inorder(root.left_child) + [root.data] + get_inorder(root.right_child)
 
 
 def get_preorder(root):
     if root is None:
         return []
-    return [root.data] + preorder(root.left_child) + preorder(root.right_child)
+    return [root.data] + get_preorder(root.left_child) + get_preorder(root.right_child)
 
 
 def get_postorder(root):
     if root is None:
         return []
-    return postorder(root.left_child) + postorder(root.right_child) + [root.data]
+    return get_postorder(root.left_child) + get_postorder(root.right_child) + [root.data]
 
 
 # Do not change the following code
