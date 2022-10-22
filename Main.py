@@ -27,13 +27,13 @@ def insert(root, new_value) -> BinaryTreeNode:
     return insert(root.right_child,new_value)
 
 def inorder(root):
-    print(*get_inorder(root))
+    print(*get_inorder(root)+" ")
 
 def preorder(root):
-    print(*get_preorder(root))
+    print(*get_preorder(root)+" ")
 
 def postorder(root):
-    print(*get_postorder(root))
+    print(*get_postorder(root)+" ")
     
 def get_inorder(root):
     if root is None:
